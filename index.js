@@ -4,6 +4,7 @@ const { token } = require('./config.json');
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+// GUILDS 서버를 예전에 길드라고 불렀다고함
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
