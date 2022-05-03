@@ -11,5 +11,18 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isCommand()) return;
+
+	const { commandName } = interaction;
+
+	if (commandName === '야') {
+		await interaction.reply('호우');
+	}else if(commandName === "방구대장"){
+		await interaction.reply('뿡뿡이')
+	}
+});
+
+
 // Login to Discord with your client's token
 client.login(token);
