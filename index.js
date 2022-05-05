@@ -20,6 +20,10 @@ client.on('interactionCreate', async interaction => {
 		await interaction.reply('호우');
 	}else if(commandName === "방구대장"){
 		await interaction.reply('뿡뿡이')
+	}else if (commandName === "서버"){
+		await interaction.reply(`서버이름 : ${interaction.guild.name} \n 서버인원 : ${interaction.guild.memberCount}`)
+	} else if (commandName === '유저') {
+		await interaction.reply(`유저태그 : ${interaction.user.tag}\n유저 아이디: ${interaction.user.id}`);
 	}
 });
 
